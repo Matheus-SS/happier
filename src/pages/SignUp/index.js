@@ -75,6 +75,7 @@ export default function SignUp() {
           <TextInput style={{
             paddingHorizontal:10,
           }}
+          secureTextEntry
           placeholder="Password"
           onChangeText={(value) => setPassword(value)}
           />

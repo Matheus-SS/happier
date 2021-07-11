@@ -3,15 +3,16 @@ import {NavigationContainer} from '@react-navigation/native'
 import * as firebase from 'firebase';
 import Routes from './src/routes';
 import { AuthProvider } from './src/helpers/AuthProvider';
+import config from './config';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyChbTnLTden9QWZVAxa7gFGa0Eqsf1ZevA",
-  authDomain: "testskill-e4203.firebaseapp.com",
-  projectId: "testskill-e4203",
-  storageBucket: "testskill-e4203.appspot.com",
-  messagingSenderId: "697119814038",
-  appId: "1:697119814038:web:ffcb7a3e6a3dd57d056db7",
-  measurementId: "G-ZWHYQQT5T3"
+  apiKey: config.API_KEY,
+  authDomain: config.AUTH_DOMAIN,
+  projectId: config.PROJECT_ID,
+  storageBucket: config.STORAGE_BUCKET,
+  messagingSenderId: config.MESSAGING_SENDER_ID,
+  appId: config.APP_ID,
+  measurementId: config.MEASUREMENT_ID
 };
 // Initialize Firebase
 if(firebase.apps.length === 0) {
