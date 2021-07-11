@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native'
+import * as firebase from 'firebase';
+import Routes from './src/routes';
+import { AuthProvider } from './src/helpers/AuthProvider';
 
-export default function App() {
+const firebaseConfig = {
+  apiKey: "AIzaSyChbTnLTden9QWZVAxa7gFGa0Eqsf1ZevA",
+  authDomain: "testskill-e4203.firebaseapp.com",
+  projectId: "testskill-e4203",
+  storageBucket: "testskill-e4203.appspot.com",
+  messagingSenderId: "697119814038",
+  appId: "1:697119814038:web:ffcb7a3e6a3dd57d056db7",
+  measurementId: "G-ZWHYQQT5T3"
+};
+// Initialize Firebase
+if(firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+
