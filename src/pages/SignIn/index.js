@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useNavigation } from '@react-navigation/native' 
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import {AuthContext} from '../../helpers/AuthProvider';
 
 export default function SignIn() {
@@ -80,7 +80,7 @@ export default function SignIn() {
         </TouchableOpacity> 
       </View>
 
-      <View style={{marginTop:10}}>
+      <View style={{marginTop:10, paddingHorizontal:20}}>
         <Text style={{color:'red'}}>{error && error.type === 'login' && error.message}</Text>
       </View>
     </View>

@@ -6,8 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 function Details({route}) {
   const {item} = route.params;
   const navigation = useNavigation();
-
-  console.log(item);
   return (
     <SafeAreaView style={{flex:1, backgroundColor:'#f36f6f', paddingHorizontal:10}}>
       <View style={{height:'50%', marginTop:10}}>

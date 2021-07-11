@@ -104,7 +104,7 @@ export default function SignUp() {
         </TouchableOpacity> 
       </View>
 
-      <View style={{marginTop:10}}>
+      <View style={{marginTop:10, paddingHorizontal:20}}>
         <Text style={{color:'red'}}>{error && error.type === 'register' && error.message}</Text>
       </View>
     </View>
