@@ -1,21 +1,12 @@
 {
   "builds": {
     "android": {
-      "release": {
-        "gradleCommand": ":app:bundleRelease"
+      "release": {},
+      "preview": {
+        "buildType": "apk"
       },
-      "development": {
-        "gradleCommand": ":app:assembleDebug",
-        "distribution": "internal"
-      }
-    },
-    "ios": {
-      "release": {
-        "buildType": "release"
-      },
-      "development": {
-        "buildType": "development-client",
-        "distribution": "internal"
+      "preview2": {
+        "gradleCommand": ":app:assembleRelease"
       }
     }
   }
